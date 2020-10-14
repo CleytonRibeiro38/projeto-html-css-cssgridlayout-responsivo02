@@ -32,14 +32,32 @@ body{
     grid-area: footer;
 }
 /*==========HEADER==========*/
+.header {width: 900px; margin: 0 auto;}
 .navegacao {display: grid; background: #c5c5b2; padding: 18px;}
 .menu {display: flex; justify-self: center;}
 .menu li + li {margin-left: 13px;}
 .menu li a {color: #4b566a; font-weight: bold; padding: 5px;}
+@media screen and (max-width: 600px){
+    .estrutura {display: block;}
+    .header, .capa img {width: 100%;}
+    .menu {display: block;}
+    .menu li {text-align: center;}
+    .menu li a {padding: 0px;}
+    .menu li + li {margin-top: 10px;}
+}
+@media screen and (min-width: 601px) and (max-width: 910px){
+    .estrutura {display: block;}
+    .header, .capa img {width: 100%;}
+}
 /*==========CONTENT==========*/
 .content {display: grid; background: #e8e8d9; padding: 15px 10px;}
 .content img {border: 10px solid #c3c3ae; justify-self: center;}
 .content h1 {color: #828271; font-size: 1.2em; padding: 10px 0; justify-self: center;}
 .content p {margin: 10px 0; text-align: justify;}
+@media screen and (max-width: 910px){
+    .content {display: block; width: 100%;}
+    .content img {width: 100%;}
+    .content h1 {text-align: center;}
+}
 /*==========FOOTER==========*/
 .footer {text-align: center; padding: 20px;}
